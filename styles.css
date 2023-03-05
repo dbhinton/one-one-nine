@@ -1,0 +1,313 @@
+/* Global Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Header Styles */
+  
+  header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold; 
+    margin-right: 20px;
+    display: inline-block;
+  }
+  
+  nav {
+    display: inline-block;
+  }
+  
+  nav ul {
+    display: flex;
+    align-items: center;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    transition: all 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #FFB6C1;
+  }
+  
+  .menu-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: none;
+    cursor: pointer;
+  }
+  
+  .menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 5px auto;
+    transition: all 0.3s ease;
+  }
+  
+  /* Membership Styles */
+  
+  .membership-section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+  
+  .membership-section-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .membership-section-content p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #666;
+  }
+  
+  /* Parallax Styles */
+  
+  #parallax-section {
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #parallax-section .parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: brightness(50%);
+    z-index: -1;
+  }
+  
+  #parallax-section .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+  }
+  
+  #parallax-section .overlay-text h2 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+  }
+  
+  #parallax-section-2 {
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #parallax-section-2 .parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: brightness(50%);
+    z-index: -1;
+  }
+  
+  #parallax-section-2 .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+  }
+  
+  /* Footer Styles */
+  
+  footer {
+    background-color: #111;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Footer Styles */
+
+footer {
+    background-color: #111;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Hamburger Menu Styles */
+  
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    margin-top: 10px;
+  }
+  
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 5px 0;
+  }
+  
+  /* Media Queries */
+  
+  @media only screen and (max-width: 768px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    nav {
+      display: none;
+      width: 100%;
+      text-align: center;
+      margin-top: 10px;
+    }
+    
+    nav ul {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+    }
+    
+    nav ul li {
+      margin-bottom: 10px;
+    }
+    
+    .hamburger {
+      display: block;
+    }
+    
+    .active {
+      display: block;
+    }
+
+
+    .hamburger {
+        display: block;
+        width: 25px;
+        height: 20px;
+        position: relative;
+        cursor: pointer;
+      }
+      
+      .bar {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: #333;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all 0.3s ease;
+      }
+      
+      .bar:first-child {
+        top: 25%;
+      }
+      
+      .bar:last-child {
+        top: 75%;
+      }
+      
+      .hamburger.active .bar:first-child {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      
+      .hamburger.active .bar:last-child {
+        transform: rotate(-45deg) translate(5px, -5px);
+      }
+      
+      .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+      }
+      
+  }
+  
