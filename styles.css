@@ -22,34 +22,62 @@
     list-style: none;
   }
   
-  .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
   
   /* Header Styles */
-  
   header {
-    background-color: #fff;
-    border-bottom: 1px solid #ddd;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    z-index: 999;
+    width: 100%;
+    z-index: 9999; /* set z-index to a high value */
+    background-color: rgba(0, 0, 0, 0); /* add a semi-transparent background color */
+    color: white;
   }
-  
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold; 
-    margin-right: 20px;
-    display: inline-block;
-  }
-  
   nav {
-    display: inline-block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: rgba(0,0,0,0);
   }
+
+  label.logo {
+    display: inline-block;
+    margin-right: auto;
+
+  }
+
+  .nav-links{
+    list-style: none;
+  }
+
+  .nav-links li {
+    display: inline-block;
+    padding: 0px 15px;
+  }
+
+  .nav-links li a{
+    transition: all .3s ease 0s;
+  }
+
+  .nav-links li a:hover { 
+    transition: #0088a9;
+  }
+
+  .nav-button {
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-attachment: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all .3s ease 0s;
+  }
+
+  .nav-button:hover {
+    background-color: rgba(0, 136, 169, .8);
+  }
+  
   
   nav ul {
     display: flex;
@@ -84,20 +112,34 @@
     margin: 5px auto;
     transition: all 0.3s ease;
   }
+
+  
   
   /* Membership Styles */
+  
+  .container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: flex;
+  align-items: center;  
+  justify-content: space-between;
+  max-width: 80%;
+  padding: 50px;
+}
+
   
   .membership-section-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin-bottom: 60px;
+    margin-right: 10%
   }
   
   .membership-section-content h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    text-align: center;
+    text-align: left;
   }
   
   .membership-section-content p {
@@ -105,6 +147,45 @@
     line-height: 1.6;
     color: #666;
   }
+
+    
+  .budget-section-content {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
+  
+  .budget-section-content h3 {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .budget-section-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+  }
+
+  .section-button{
+    background-color: white;
+    background-attachment:black;
+    padding: 15px;
+    border-radius: 5px;
+    position: relative;
+    top: 30px;
+    cursor: pointer;
+    transition: all .3s ease 0s;
+    font-size: 1rem;
+    text-align: center;
+  }
+  .section-button:hover{
+    background-color: black;
+    color: white;
+
+  }
+
+
   
   /* Parallax Styles */
   
@@ -129,6 +210,7 @@
     z-index: -1;
   }
   
+  
   #parallax-section .overlay-text {
     position: absolute;
     top: 50%;
@@ -151,7 +233,7 @@
     overflow: hidden;
   }
   
-  #parallax-section-2 .parallax {
+  #parallax-section-2 .parallax-2 {
     position: absolute;
     top: 0;
     left: 0;
@@ -160,7 +242,6 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    filter: brightness(50%);
     z-index: -1;
   }
   
@@ -177,32 +258,16 @@
   /* Footer Styles */
   
   footer {
-    background-color: #111;
+    background-color: rgb(34, 33, 33);
     color: #fff;
     padding: 2rem 0;
     text-align: center;
+    padding: 150px;
   }
-  
-  footer p {
-    margin: 0;
-  }
-  
-  footer a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  footer a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Footer Styles */
 
-footer {
-    background-color: #111;
+  footer h3 {
     color: #fff;
-    padding: 2rem 0;
-    text-align: center;
+    font-size: 2rem;
   }
   
   footer p {
@@ -216,6 +281,30 @@ footer {
   
   footer a:hover {
     text-decoration: underline;
+  }
+
+  .footer-button{
+    background-color: rgb(34, 33, 33);
+    border: #fff;
+    border-style: solid;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    position: relative;
+    top: 30px;
+    cursor: pointer;
+    transition: all .3s ease 0s;
+    font-size: 1rem;
+    text-align: center;
+  }
+  .footer-button:hover{
+    background-color: white;
+    color: rgb(34, 33, 33);
+  }
+
+  .social-logo{
+    margin-top: 7%;
+    padding: 5px;
   }
   
   /* Hamburger Menu Styles */
@@ -235,79 +324,4 @@ footer {
   }
   
   /* Media Queries */
-  
-  @media only screen and (max-width: 768px) {
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    nav {
-      display: none;
-      width: 100%;
-      text-align: center;
-      margin-top: 10px;
-    }
-    
-    nav ul {
-      display: flex;
-      flex-direction: column;
-      margin: 0;
-      padding: 0;
-    }
-    
-    nav ul li {
-      margin-bottom: 10px;
-    }
-    
-    .hamburger {
-      display: block;
-    }
-    
-    .active {
-      display: block;
-    }
-
-
-    .hamburger {
-        display: block;
-        width: 25px;
-        height: 20px;
-        position: relative;
-        cursor: pointer;
-      }
-      
-      .bar {
-        display: block;
-        width: 100%;
-        height: 3px;
-        background-color: #333;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        transition: all 0.3s ease;
-      }
-      
-      .bar:first-child {
-        top: 25%;
-      }
-      
-      .bar:last-child {
-        top: 75%;
-      }
-      
-      .hamburger.active .bar:first-child {
-        transform: rotate(45deg) translate(5px, 5px);
-      }
-      
-      .hamburger.active .bar:last-child {
-        transform: rotate(-45deg) translate(5px, -5px);
-      }
-      
-      .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-      }
-      
-  }
   
